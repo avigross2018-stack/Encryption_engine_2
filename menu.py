@@ -22,4 +22,4 @@ def user_code():
                 not_correct = True
                 break
             not_correct = False
-    return user_input
+    return user_input.lower()
