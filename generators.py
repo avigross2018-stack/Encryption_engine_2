@@ -50,7 +50,7 @@ def loop_on_fence(user_input):
 
 def rand_cipher(user_input):
     rand_list = letters + numbers
-    for i in user_input:
+    for _ in range(len(user_input)):
         rand = random.choice(rand_list)
         yield rand
 
