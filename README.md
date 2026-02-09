@@ -8,12 +8,12 @@ In the encryption engine you can encrypt your input code to...
 
 # Explain about the encryption #
 ## Caesar cipher ##
-The software get user input and a number,
+The software get user input and a number,\n
 The software returns the code in a skip according to the user's choice.
 
 ## Fence cipher ##
-The software get user input,
-the software returns the code in order of...
+The software get user input,\n
+the software returns the code in order of...\n
 first the even characters and after the odd characters.
 
 ## AtBsh cipher ##
@@ -26,4 +26,4 @@ the software returns random letters and numbers
 
 
 # To run the software #
-in the **main.py** you run the function called **main()**
+in the **main.py** you need to run the function called **main()**
