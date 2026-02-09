@@ -74,13 +74,12 @@ def atbsh_cipher(user_input):
             index = numbers.index(char)
             yield numbers[len(numbers) - 1 - index]
 
-        else:
-            yield char
 
 
 def loop_on_atbsh(user_input):
     encrypt_final = ''
-    for ch in atbsh_cipher(user_input):
+    atbsh = atbsh_cipher(user_input)
+    for ch in atbsh:
         encrypt_final += ch
     return encrypt_final
 
