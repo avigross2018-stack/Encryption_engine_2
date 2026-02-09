@@ -3,6 +3,26 @@ letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n',
 numbers = list(string.digits)
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 def cesar_cipher(user_input, amount):
     cipher_letters = list(string.ascii_letters)
     for n in range(amount):
@@ -19,5 +39,3 @@ def loop_on_cesar(user_input, amount):
     for w in func:
         encryp_code += w
     return encryp_code
-
-print(loop_on_cesar('avi', 1))
