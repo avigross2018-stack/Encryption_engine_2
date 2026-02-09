@@ -24,14 +24,22 @@ numbers = list(string.digits)
 
 
 def cesar_cipher(user_input, amount):
-    cipher_letters = list(string.ascii_letters)
+    cipher_letters = letters.copy()
+    cipher_numbers = numbers.copy()
     for n in range(amount):
-        out = cipher_letters.pop(0)
-        cipher_letters.append(out)
+        out1 = cipher_letters.pop(0)
+        out2 = cipher_numbers.pop(0)
+        cipher_numbers.append(out2)
+        cipher_letters.append(out1)
+
     user_code = list(user_input.lower())
     for i in user_code:
-        index = letters.index(i)
-        yield cipher_letters[index]
+        if i in cipher_letters:
+            index1 = letters.index(i)
+            yield cipher_letters[index1]
+        elif i in numbers:
+            index2 = numbers.index(i)
+            yield cipher_numbers[index2]
 
 def loop_on_cesar(user_input, amount):
     encryp_code = ''
