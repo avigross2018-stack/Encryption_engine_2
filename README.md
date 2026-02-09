@@ -7,7 +7,7 @@ In the encryption engine you can encrypt your input code to...
 4. Random cipher
 
 # Explain about the encryption #
-## +Caesar cipher ##
+## 🔴Caesar cipher ##
 The software get user input and a number,  
 The software returns the code in a skip according to the user's choice.
 
