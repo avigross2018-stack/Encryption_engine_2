@@ -1,6 +1,7 @@
 import string
 letters = list(string.ascii_letters)
 numbers = list(string.digits)
+chars = list(string.punctuation)
 
 
 def fence_cipher_gen(string):
