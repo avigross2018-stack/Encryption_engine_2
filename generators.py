@@ -1,6 +1,8 @@
 import string
+import random
 letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 numbers = list(string.digits)
+
 
 
 def cesar_cipher(user_input, amount):
@@ -44,3 +46,18 @@ def loop_on_fence(user_input):
     for letter in fence:
         encrypted_result += letter
     return encrypted_result
+
+
+
+def rand_cipher(user_input):
+    rand_list = letters + numbers
+    for i in user_input:
+        rand = random.choice(rand_list)
+        yield rand
+
+def loop_on_rand(user_input):
+    encryp_final = ''
+    rand_func = rand_cipher(user_input)
+    for i in rand_func:
+        encryp_final += i
+    return encryp_final
