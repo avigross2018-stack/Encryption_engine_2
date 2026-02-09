@@ -1,8 +1,8 @@
 import string
 import random
-letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-numbers = list(string.digits)
-chars = list(string.punctuation)
+letters = [lett for lett in string.ascii_lowercase]
+numbers = [num for num in string.digits]
+chars = [char for char in string.punctuation]
 
 
 
@@ -15,7 +15,7 @@ def cesar_cipher(user_input, amount):
         cipher_numbers.append(out2)
         cipher_letters.append(out1)
 
-    user_code = list(user_input.lower())
+    user_code = list(user_input)
     for i in user_code:
         if i in cipher_letters:
             index1 = letters.index(i)
@@ -35,11 +35,10 @@ def loop_on_cesar(user_input, amount):
 def fence_cipher_gen(string):
     for index, evenw in enumerate(string):
         if index % 2 == 0:
-            yield evenw.lower()
+            yield evenw
     for index, oddw in enumerate(string):
         if index % 2 != 0:
-            yield oddw.lower()
-
+            yield oddw
 
 def loop_on_fence(user_input):
     encrypted_result = ""
@@ -47,7 +46,6 @@ def loop_on_fence(user_input):
     for letter in fence:
         encrypted_result += letter
     return encrypted_result
-
 
 
 def rand_cipher(user_input):
