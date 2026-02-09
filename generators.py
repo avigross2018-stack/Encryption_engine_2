@@ -62,3 +62,25 @@ def loop_on_rand(user_input):
     for i in rand_func:
         encryp_final += i
     return encryp_final
+
+
+def atbsh_cipher(user_input):
+    for char in user_input:
+        if char in letters:
+            index = letters.index(char)
+            yield letters[len(letters) - 1 - index]
+
+        elif char in numbers:
+            index = numbers.index(char)
+            yield numbers[len(numbers) - 1 - index]
+
+
+
+def loop_on_atbsh(user_input):
+    encrypt_final = ''
+    atbsh = atbsh_cipher(user_input)
+    for ch in atbsh:
+        encrypt_final += ch
+    return encrypt_final
+
+
