@@ -2,7 +2,7 @@ from generators import chars
 
 
 def menu():
-    print("1. Caesar cipher\n2. Fence cipher\n3. AtBsh cipher\n4. Random cipher")
+    print("1. Caesar cipher\n2. Fence cipher\n3. Random cipher\n4. AtBsh cipher")
     while True:
         cipher_type = input("Select a cipher type (1-4):  ")
         if cipher_type in ["1", "2", "3", "4"]:
